@@ -1,0 +1,15 @@
+.subscribe__text {
+  @include font-full($oswald-font, 16px, 24px, 400, $secondary-color);
+  text-align: center;
+}
+
+.subscribe__email {
+  @include font-full($oswald-font, 20px, 29.6px, 400);
+  text-transform: uppercase;
+  background-color: $primary-bg-color;
+  border: 1px solid #cdcdcd;
+
+  &:hover {
+
+  }
+}

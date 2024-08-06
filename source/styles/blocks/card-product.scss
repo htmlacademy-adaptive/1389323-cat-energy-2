@@ -1,0 +1,38 @@
+.card-product__link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.card-product__name {
+  @include font-full($oswald-font, 16px, 20px, 400, $special-dark-grey);
+  text-transform: uppercase;
+
+  &--empty {
+    color: $special-dark;
+    text-align: center;
+  }
+}
+
+.card-product__characteristics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-product__text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+

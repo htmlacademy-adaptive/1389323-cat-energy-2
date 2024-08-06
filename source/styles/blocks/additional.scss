@@ -1,0 +1,74 @@
+.additional__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional__title {
+  @include font-full($oswald-font, 16px, 16px, 400, $special-dark-grey);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.additional__characteristic {
+  line-height: 14px;
+}
+
+.additional__value {
+  line-height: 14px;
+}
+
+.additional__offer {
+  color: $contrast-text-color;
+
+  @media (max-width: $mobile-width) {
+    background-image:
+      linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+      url("../../images/background/additional-background@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+        url("../../images/background/additional-background@2x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image:
+      linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+      url("../../images/background/additional-background-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+        url("../../images/background/additional-background-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image:
+      linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+      url("../../images/background/additional-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+        url("../../images/background/additional-background-desktop@2x.jpg");
+    }
+  }
+}
+
+.additional__text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}

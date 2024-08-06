@@ -1,0 +1,44 @@
+.basic-button {
+  @include font-full($oswald-font, 16px, 20px, 400, $contrast-text-color);
+  text-transform: uppercase;
+  background-color: $basic-green;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background-color: $basic-green-hover;
+  }
+
+  &:focus {
+    background-color: $basic-green-hover;
+  }
+
+  &:active {
+    color: rgba($contrast-text-color, 0.3);
+  }
+
+  &--secondary {
+    color: $primary-color;
+    background-color: $basic-grey;
+
+    &:hover {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+
+    &:focus {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+
+    &:active {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+  }
+
+  &--accent {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

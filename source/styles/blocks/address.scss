@@ -1,0 +1,9 @@
+.address__appeal {
+  @include font-full($oswald-font, 16px, 20px, 400, $special-dark);
+  text-transform: uppercase;
+}
+
+.address__text {
+  line-height: 20px;
+  font-style: normal;
+}

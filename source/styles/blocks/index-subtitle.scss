@@ -1,0 +1,4 @@
+.index-subtitle {
+  @include font-full($oswald-font, 36px, 40px, 400, $secondary-color);
+  text-align: center;
+}

@@ -1,0 +1,4 @@
+.catalog-subtitle {
+  @include font-full($oswald-font, 24px, 24px, 400, $secondary-color);
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-url) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-url;
+    display: swap;
+  }
+}
+
+@mixin font-full($font-family: $lato-font, $font-size: 14px, $line-height: 18px, $font-weight: 400, $color: $primary-color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}

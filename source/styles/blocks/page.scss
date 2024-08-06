@@ -1,0 +1,6 @@
+.page__body {
+  @include font-full();
+  font-style: normal;
+  background-color: $primary-bg-color;
+}
+

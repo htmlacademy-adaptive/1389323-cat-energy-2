@@ -1,21 +1,90 @@
 .program-card {
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 316px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
 }
 
 .program-card__title {
-  @include font-full($oswald-font, 24px, 37px, 400, $secondary-color);
+  @include font-full($oswald-font, 24px, $line-height-title, 400, $secondary-color);
+  position: relative;
+  padding-left: calc($margin-left-title + $slim-width);
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+  }
+
+  &::before {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--slim::before {
+    @include before-after(50px, 50px);
+    inset: calc(-1 * (50px / 2 - $line-height-title/2)) 0 0 0;
+    background-image: url("../../icons/stack.svg#program-slim");
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 211px;
+      inset: 4px 0 0 392px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 106px;
+      $line-height-title: 36px;
+      inset: calc(-1 * (106px / 2 - $line-height-title/2)) 0 0 0;
+    }
+  }
+
+  &--pro::before {
+    @include before-after(67px, 50px);
+    inset: calc(-1 * (50px / 2 - $line-height-title/2)) 0 0 -7px;
+    background-image: url("../../icons/stack.svg#program-pro");
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 200px;
+      inset: 14px 0 0 358px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 100px;
+      $line-height-title: 36px;
+      inset: calc(-1 * (100px / 2 - $line-height-title/2)) 0 0 -19px;
+    }
+  }
 }
 
 .program-card__link {
   @include font-full($oswald-font, 16px, 16px, 400, $secondary-color);
+  position: relative;
   text-align: center;
   text-transform: uppercase;
 
-  &:hover {
-  }
 
-  &:focus {
+  &::after {
+    @include before-after(32px, 12px);
+    position: absolute;
+    top: 25%;
+    right: -47px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+    background-position: left;
   }
 
   &:active {

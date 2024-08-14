@@ -15,3 +15,10 @@
   font-weight: $font-weight;
   color: $color;
 }
+
+@mixin before-after($width, $height, $display: block, $content: "") {
+  width: $width;
+  height: $height;
+  display: $display;
+  content: $content;
+}

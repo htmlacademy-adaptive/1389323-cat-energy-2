@@ -2,4 +2,25 @@
   font-size: 16px;
   line-height: 20px;
   color: $primary-color;
+
+  &::after {
+    @include before-after(27px, 34px);
+    background-color: $special-grey;
+    mask-image: url("../../icons/stack.svg#html-academy");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 27px 34px;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+

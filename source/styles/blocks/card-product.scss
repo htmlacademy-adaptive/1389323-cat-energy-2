@@ -17,8 +17,39 @@
   text-transform: uppercase;
 
   &--empty {
+    position: relative;
     color: $special-dark;
     text-align: center;
+
+    &::after,
+    &::before {
+      @include before-after(2px, 30px);
+      position: absolute;
+      top: -53px;
+      left: 50%;
+      background-color: #d3d3d3;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      transform: rotate(90deg) translate(-7%, 0);
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after,
+      &::before {
+        height: 60px;
+        top: -110px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::after,
+      &::before {
+        height: 60px;
+        top: -100px;
+      }
+    }
   }
 }
 

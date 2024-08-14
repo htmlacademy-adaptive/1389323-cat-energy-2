@@ -3,3 +3,32 @@
   padding: 0;
   list-style: none;
 }
+
+
+.methodology__item::before {
+  @include before-after(60px, 60px);
+  background-color: $basic-green;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.methodology__item--benefit::before {
+  background-image: url("../../icons/stack.svg#benefit");
+  background-size: 30px 32px;
+}
+
+.methodology__item--release-form::before {
+  background-image: url("../../icons/stack.svg#release-form");
+  background-size: 27px 29px;
+}
+
+.methodology__item--replacement::before {
+  background-image: url("../../icons/stack.svg#replacement");
+  background-size: 25px 30px;
+}
+
+.methodology__item--timing::before {
+  background-image: url("../../icons/stack.svg#timing");
+  background-size: 26px 32px;
+}
+

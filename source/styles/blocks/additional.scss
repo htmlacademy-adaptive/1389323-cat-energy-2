@@ -20,50 +20,41 @@
 
 .additional__offer {
   color: $contrast-text-color;
-
-  @media (max-width: $mobile-width) {
-    background-image:
-      linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-      url("../../images/background/additional-background@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-
-    @media (min-resolution: 2dppx) {
-      background-image:
-        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-        url("../../images/background/additional-background@2x.jpg");
-    }
-  }
+  padding-top: 150px;
+  min-height: 290px;
+  background-image:
+    url("../../icons/stack.svg#additional-icon"),
+    linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
+    image-set(url("../../images/background/additional-background@1x.jpg") 1x, url("../../images/background/additional-background@2x.jpg") 2x);
+  background-repeat: no-repeat;
+  background-size: 78px 80px, cover, 100% auto;
+  background-position: top 65px center, top center, center;
 
   @media (min-width: $tablet-width) {
+    min-height: 200px;
+    padding-left: 170px;
+    padding-top: 0;
     background-image:
+      url("../../icons/stack.svg#additional-icon"),
       linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-      url("../../images/background/additional-background-tablet@1x.jpg");
+      image-set(url("../../images/background/additional-background-tablet@1x.jpg") 1x, url("../../images/background/additional-background-tablet@2x.jpg") 2x);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-
-    @media (min-resolution: 2dppx) {
-      background-image:
-        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-        url("../../images/background/additional-background-tablet@2x.jpg");
-    }
+    background-size: 80px 83px, cover, cover;
+    background-position: left 88px top 50%, top center, center;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-top: 150px;
+    width: 245px;
+    min-height: 288px;
     background-image:
+      url("../../icons/stack.svg#additional-icon"),
       linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-      url("../../images/background/additional-background-desktop@1x.jpg");
+      image-set(url("../../images/background/additional-background-desktop@1x.jpg") 1x, url("../../images/background/additional-background-desktop@2x.jpg") 2x);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-
-    @media (min-resolution: 2dppx) {
-      background-image:
-        linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-        url("../../images/background/additional-background-desktop@2x.jpg");
-    }
+    background-size: 80px 83px, cover, cover;
+    background-position: top 56px center, top center, center;
   }
 }
 

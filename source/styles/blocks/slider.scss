@@ -1,12 +1,35 @@
+.slider {
+  @include full-flex(flex-start, stretch, row nowrap);
+}
+
+.slider__before-container {
+  width: calc($width-slider-mobile / 2);
+  flex-grow: 1;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $width-slider-mobile;
+  }
+}
+
+.slider__after-container {
+  width: calc($width-slider-mobile / 2);
+  flex-grow: 1;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    width: $width-slider-mobile;
+  }
+}
+
 .slider__button {
   position: relative;
   color: $contrast-text-color;
   background-color: $special-grey;
   width: 4px;
-  height: 256px;
+  height: $height-slider-mobile;
   border-radius: 2px;
   border: none;
-  margin-left: 300px;
 
   &::before,
   &::after {
@@ -33,7 +56,19 @@
     z-index: 1;
   }
 
-  &:hover,
+  &:hover {
+    background-color: $basic-green;
+    cursor: pointer;
+
+    &::after {
+      background-color: $basic-green;
+    }
+
+    &::before {
+      border-color: $basic-green;
+    }
+  }
+
   &:focus {
     background-color: $basic-green;
 
@@ -56,5 +91,9 @@
     &::before {
       border-color: rgba($basic-green-light, 0.6);
     }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    height: calc($height-slider-mobile * 2);
   }
 }

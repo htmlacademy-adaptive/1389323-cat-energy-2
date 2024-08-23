@@ -1,21 +1,103 @@
 .main-nav {
-  @include font-full($oswald-font, 20px, 20px, 400, $secondary-color);
+  @include full-flex(center, flex-end, column nowrap);
+  @include font-full($oswald-font, 20px, 1, 400, $secondary-color);
+  width: 58px;
+  min-height: 24px;
   font-style: normal;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-block: auto;
+
+  @media screen and (min-width: $tablet-width) {
+    align-items: center;
+    flex-flow: row wrap;
+    width: 436px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 483px;
+    font-size: 20px;
+    line-height: 29.64px;
+    color: $special-dark;
+  }
+
+  &--home {
+    @media screen and (min-width: $desktop-width) {
+      color: $contrast-text-color;
+      background-color: transparent;
+    }
+  }
 }
 
 .main-nav__toggle {
+  min-width: 24px;
+  min-height: 24px;
+  margin-left: auto;
   background-color: $primary-bg-color;
-  border: none;
+  cursor: pointer;
+  border-color: red;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
+  display: none;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  width: 100vw;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: $primary-bg-color;
+  z-index: 3;
+
+  &--open {
+    display: block;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    @include full-flex(flex-end);
+    position: static;
+    top: 0;
+    right: 0;
+    width: 436px;
+    column-gap: 33px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 480px;
+    background-color: transparent;
+  }
 }
 
+.main-nav__item {
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    border: none;
+    text-align: right;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+
 .main-nav__link {
+  display: block;
+  padding-block: 21px 24px;
   color: inherit;
 
   &:hover {
@@ -30,5 +112,23 @@
     opacity: 0.3;
   }
 
-  &--current {}
+  @media screen and (min-width: $tablet-width) {
+    padding-block: 10px 12px;
+
+    &--current {
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-color: $basic-green;
+      text-decoration-thickness: 2px;
+      text-underline-position: under;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-block: 13px;
+
+    &--current-home {
+      text-decoration-color: $contrast-text-color;
+    }
+  }
 }

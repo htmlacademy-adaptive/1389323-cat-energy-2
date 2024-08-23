@@ -1,9 +1,68 @@
+.address {
+  position: relative;
+  background-color: $basic-grey;
+
+  &--home {
+    background-color: $primary-bg-color;
+  }
+}
+
+.address__container {
+  @include full-flex();
+  width: 280px;
+  margin-inline: auto;
+  padding-block: 26px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 708px;
+    padding: 61px 40px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 565px;
+    padding: 60px 78px 60px 80px;
+    position: absolute;
+    top: 95px;
+    left: calc((100vw - 1220px)/2);
+    background-color: $primary-bg-color;
+  }
+}
+
 .address__appeal {
   @include font-full($oswald-font, 16px, 20px, 400, $special-dark);
   text-transform: uppercase;
+  width: 140px;
+  margin-block: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
 }
 
 .address__text {
   line-height: 20px;
   font-style: normal;
+  width: 140px;
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    width: 157px;
+  }
+}
+
+.address__desc {
+  margin-block: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.address__map {
+  width: 100%;
 }

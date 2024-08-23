@@ -1,15 +1,69 @@
+.subscribe {
+  @include full-flex();
+  row-gap: 16px;
+
+  @media screen and  (min-width: $tablet-width) {
+    justify-content: center;
+  }
+}
+
 .subscribe__text {
   @include font-full($oswald-font, 16px, 24px, 400, $secondary-color);
   text-align: center;
+  margin-block: 0 8px;
+  width: 100%;
+
+  @media screen and  (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 632px;
+    margin-bottom: 0;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .subscribe__email {
   @include font-full($oswald-font, 20px, 29.6px, 400);
   text-transform: uppercase;
   background-color: $primary-bg-color;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e7e7e7;
+  padding: 14px;
+  width: 280px;
+  color: $primary-color;
+  /*
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+*/
 
   &:hover {
+    border-color: #cdcdcd;
+  }
 
+  &:focus {
+    border-color: $primary-color;
+    border-width: 2px;
+    outline: none;
+  }
+
+  @media screen and  (min-width: $tablet-width) {
+    width: 376px;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    width: 496px;
+  }
+}
+
+.subscribe__button {
+  padding-block: 15px;
+  width: 100%;
+
+  @media screen and  (min-width: $tablet-width) {
+    width: 256px;
+    padding-block: 15px;
   }
 }

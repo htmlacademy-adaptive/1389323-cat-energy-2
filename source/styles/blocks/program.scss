@@ -1,0 +1,34 @@
+.program {
+  padding-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 71px;
+    display: grid;
+    grid-template-columns: repeat(2, 46.72%);
+    gap: 30px 80px;
+  }
+}
+
+.program__item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0;
+  }
+}

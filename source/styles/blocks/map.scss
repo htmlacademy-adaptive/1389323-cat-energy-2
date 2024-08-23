@@ -5,12 +5,12 @@
   background-position: center;
   min-height: 362px;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     min-height: 400px;
     background-image: image-set(url("../../images/background/map-tablet@1x.png") 1x, url("../../images/background/map-tablet@2x.png") 2x);
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     background-image: image-set(url("../../images/background/map-desktop@1x.png") 1x, url("../../images/background/map-desktop@2x.png") 2x);
   }
 }

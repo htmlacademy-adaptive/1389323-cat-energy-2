@@ -1,34 +1,114 @@
+.methodology {
+  padding-bottom: 49px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 69px;
+  }
+}
+
+.methodology__title {
+  margin-block: 0 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
 .methodology__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media screen and (min-width: $tablet-width) {
+    @include full-flex();
+    gap: 37px 133px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    column-gap: 77px;
+  }
 }
 
+.methodology__item {
+  @include full-flex();
+  gap: 20px;
 
-.methodology__item::before {
-  @include before-after(60px, 60px);
-  background-color: $basic-green;
-  background-repeat: no-repeat;
-  background-position: center;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    @include before-after(60px, 60px);
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--benefit::before {
+    background-image: url("../../icons/stack.svg#benefit");
+    background-size: 30px 32px;
+  }
+
+  &--release-form::before {
+    background-image: url("../../icons/stack.svg#release-form");
+    background-size: 27px 29px;
+  }
+
+  &--replacement::before {
+    background-image: url("../../icons/stack.svg#replacement");
+    background-size: 25px 30px;
+  }
+
+  &--timing::before {
+    background-image: url("../../icons/stack.svg#timing");
+    background-size: 26px 32px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    flex-flow: column nowrap;
+    gap: 31px;
+    width: 250px;
+    padding-bottom: 57px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &--benefit {
+      margin-right: 17px;
+      width: 230px;
+    }
+
+    &--release-form {
+      margin-right: 2px;
+      width: 246px;
+    }
+
+    &--replacement {
+      width: 247px;
+    }
+
+    &--timing {
+      width: 247px;
+    }
+  }
 }
 
-.methodology__item--benefit::before {
-  background-image: url("../../icons/stack.svg#benefit");
-  background-size: 30px 32px;
-}
+.methodology__text {
+  width: 199px;
+  margin-block: 0;
 
-.methodology__item--release-form::before {
-  background-image: url("../../icons/stack.svg#release-form");
-  background-size: 27px 29px;
-}
-
-.methodology__item--replacement::before {
-  background-image: url("../../icons/stack.svg#replacement");
-  background-size: 25px 30px;
-}
-
-.methodology__item--timing::before {
-  background-image: url("../../icons/stack.svg#timing");
-  background-size: 26px 32px;
+  @media screen and (min-width: $tablet-width) {
+    width: 245px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary-color;
+  }
 }
 

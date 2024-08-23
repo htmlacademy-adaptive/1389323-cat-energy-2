@@ -22,3 +22,11 @@
   display: $display;
   content: $content;
 }
+
+
+@mixin full-flex($justify-content: flex-start, $align-items: flex-start, $flex-flow: row wrap, $display: flex ) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-flow: $flex-flow;
+  display: $display;
+}

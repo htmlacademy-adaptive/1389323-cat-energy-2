@@ -14,6 +14,8 @@ $basic-grey-hover: #ebebeb;
 $special-grey: #666666;
 $special-dark: #111111;
 $special-dark-grey: #222222;
+$example-color: #eaeaea;
+$decorate-social-color: #d9d9d9;
 
 
 /* viewport */
@@ -22,8 +24,15 @@ $desktop-width: 1440px;
 $mobile-width:767px;
 
 /* program-card */
-$line-height-title: 37px;
-$slim-width: 50px !default;
-$pro-width: 67px !default;
-$margin-left-title: 20px !default;
+/* line-height for title */
+$line-height-mobile: 37px;
+$line-height-desktop: 36px;
+/* width for icon */
+$slim-width: 50px;
+$pro-width: 67px;
+$margin-left-title: 20px;
+
+/* example */
+$height-slider-mobile: 256px;
+$width-slider-mobile: 280px;
 

@@ -17,11 +17,10 @@ $special-dark-grey: #222222;
 $example-color: #eaeaea;
 $decorate-social-color: #d9d9d9;
 
-
 /* viewport */
 $tablet-width: 768px;
-$desktop-width: 1440px;
-$mobile-width:767px;
+$desktop-width: 1280px;
+$mobile-width: calc($tablet-width - 1px);
 
 /* program-card */
 /* line-height for title */
@@ -32,7 +31,11 @@ $slim-width: 50px;
 $pro-width: 67px;
 $margin-left-title: 20px;
 
+
 /* example */
 $height-slider-mobile: 256px;
 $width-slider-mobile: 280px;
+
+/* program-card */
+$padding-top-link: 4px;
 

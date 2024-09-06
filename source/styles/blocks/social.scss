@@ -1,6 +1,6 @@
 .social {
   @include full-flex(center, center);
-  gap: 24px;
+  gap: 20px 24px;
   padding: 0;
   list-style: none;
 

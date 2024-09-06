@@ -3,10 +3,11 @@
   text-align: center;
   background-image:
     linear-gradient(to bottom, rgba($basic-green, 0.85) 60.4%, $primary-bg-color 60.4%),
-    image-set(url("../../images/background/hero-background@1x.jpg") 1x, url("../../images/background/hero-background@2x.jpg") 2x);
+    image-set(url("../../images/background/hero-background@1x.jpg") 1x, url("../../images/background/hero-background@2x.jpg") 2x),
+    linear-gradient(to bottom, #4c4b50 60.4%, $primary-bg-color 60.4%);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100% auto, 320px auto;
+  background-size: 100% auto, 320px auto, 100% auto;
 
   @media screen and (min-width: $tablet-width) {
     padding-block: 0;
@@ -20,9 +21,10 @@
     min-height: 693px;
     background-image:
       linear-gradient(to left, rgba($basic-green, 0.85) 50%, $primary-bg-color 50%),
-      image-set(url("../../images/background/hero-background-desktop@1x.jpg") 1x, url("../../images/background/hero-background-desktop@2x.jpg") 2x);
+      image-set(url("../../images/background/hero-background-desktop@1x.jpg") 1x, url("../../images/background/hero-background-desktop@2x.jpg") 2x),
+      linear-gradient(to left, #4e4f53 50%, $primary-bg-color 50%);
     background-position: top right;
-    background-size: 100% auto, 50% auto;
+    background-size: 100% auto, 50% auto, 100% auto;
   }
 }
 
@@ -53,15 +55,14 @@
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 40px;
-    margin-left: 93px;
+    margin-left: 90px;
     font-size: 60px;
     line-height: 60px;
     color: $secondary-color;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin: 81px 0 0 80px;
-    margin-left: 80px;
+    margin: 82px 0 0 79px;
     align-self: start;
     z-index: 1;
   }
@@ -78,7 +79,7 @@
     font-size: 20px;
     line-height: 20px;
     color: $secondary-color;
-    margin-left: 93px;
+    margin-left: 90px;
     margin-bottom: 21px;
   }
 
@@ -100,7 +101,7 @@
   @media screen and (min-width: $tablet-width) {
     width: 709px;
     height: 100%;
-    margin-left: 3px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -120,7 +121,7 @@
     position: absolute;
     width: 244px;
     bottom: 526px;
-    left: 93px;
+    left: 90px;
   }
 
   @media screen and (min-width: $desktop-width) {

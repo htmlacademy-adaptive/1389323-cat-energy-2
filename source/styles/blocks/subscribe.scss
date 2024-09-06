@@ -4,6 +4,7 @@
 
   @media screen and  (min-width: $tablet-width) {
     justify-content: center;
+    row-gap: 24px;
   }
 }
 
@@ -29,15 +30,17 @@
   @include font-full($oswald-font, 20px, 29.6px, 400);
   text-transform: uppercase;
   background-color: $primary-bg-color;
-  border: 1px solid #e7e7e7;
-  padding: 14px;
+  padding: 14px 12px 11px;
   width: 280px;
   color: $primary-color;
-  /*
+
   &:invalid {
     border: 2px solid #ff8282;
   }
-*/
+
+  &:valid {
+    border: 1px solid #e7e7e7;
+  }
 
   &:hover {
     border-color: #cdcdcd;
@@ -59,11 +62,10 @@
 }
 
 .subscribe__button {
-  padding-block: 15px;
+  padding-block: 13px 13px;
   width: 100%;
 
   @media screen and  (min-width: $tablet-width) {
     width: 256px;
-    padding-block: 15px;
   }
 }

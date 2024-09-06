@@ -1,15 +1,15 @@
 .main-header {
-  padding-block: 13px 14px;
+  padding-block: 13px 0;
   position: relative;
 
   &::after {
     @include before-after(100%, 1px);
     background-color: #d9d9d9;
-    margin-top: 15px;
+    margin-top: 9px;
   }
 
   @media screen and (min-width: $tablet-width) {
-    padding-block: 25px 65px;
+    padding-block: 25px 62px;
 
     &::after {
       display: none;
@@ -22,14 +22,26 @@
 
   &--home {
     &::after {
-      display: none;
+      background-color: $primary-bg-color;
     }
 
     @media screen and (min-width: $desktop-width) {
       position: absolute;
       top: 0;
       z-index: 2;
-      width: 100vw;
+      width: 1220px;
+      left: calc((100vw - 1220px) / 2);
+    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    &--nojs {
+      padding-bottom: 0;
+    }
+
+    &--nojs::after {
+      background-color: $primary-bg-color;
+      margin-top: -1px;
     }
   }
 }
@@ -42,16 +54,21 @@
 
   @media screen and (min-width: $tablet-width) {
     justify-content: flex-start;
-    width: 708px;
-    padding-right: 3px;
+    width: 768px;
+    padding-inline: 30px 34px;
+
+    .main-header--home & {
+      padding-right: 36px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 1220;
+    margin-inline: auto;
+    width: 1220px;
+    padding-inline: 0;
 
-    &--home {
-      margin-inline: auto;
-      width: 1220px;
+    .main-header--home & {
+      padding-right: 0;
     }
   }
 }

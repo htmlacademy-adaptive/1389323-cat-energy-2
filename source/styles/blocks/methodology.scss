@@ -16,16 +16,21 @@
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 72px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
 }
 
 .methodology__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: methodology 0;
 
   @media screen and (min-width: $tablet-width) {
     @include full-flex();
-    gap: 37px 133px;
+    gap: 78px 133px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -36,6 +41,8 @@
 .methodology__item {
   @include full-flex();
   gap: 20px;
+  counter-increment: methodology 1;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -46,6 +53,11 @@
     background-color: $basic-green;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--benefit::before {
@@ -70,45 +82,86 @@
 
   @media screen and (min-width: $tablet-width) {
     flex-flow: column nowrap;
-    gap: 31px;
+    gap: 30px;
     width: 250px;
     padding-bottom: 57px;
 
     &:not(:last-child) {
       margin-bottom: 0;
     }
+
+    &::after {
+      @include before-after(138px, 280px, block, counter(methodology));
+      @include font-full($oswald-font, 280px, 280px, 400, $basic-grey);
+      position: absolute;
+      top: -40px;
+      right: 0;
+      z-index: -1;
+      text-align: left;
+    }
+
+    &--benefit::after {
+      width: 133px;
+    }
+
+    &--release-form::after {
+      width: 139px;
+    }
+
+    &--timing::after {
+      width: 137px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
-    &--benefit {
-      margin-right: 17px;
-      width: 230px;
-    }
+    width: 247px;
 
     &--release-form {
-      margin-right: 2px;
-      width: 246px;
+      margin-right: 1px;
     }
 
-    &--replacement {
-      width: 247px;
+    &::before {
+      margin-left: 1px;
     }
 
-    &--timing {
-      width: 247px;
+    &::after {
+      width: 133px;
+    }
+
+    &--benefit::before {
+      margin-left: 0;
+    }
+
+    &--benefit::after {
+      width: 129px;
     }
   }
 }
 
 .methodology__text {
-  width: 199px;
+  width: 200px;
   margin-block: 0;
+  align-self: center;
+
+  .methodology__item--timing & br {
+    display: none;
+  }
 
   @media screen and (min-width: $tablet-width) {
     width: 245px;
     font-size: 16px;
     line-height: 24px;
     color: $primary-color;
+    margin-left: -4px;
+
+    .methodology__item--timing & br {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 0;
+    width: 100%;
   }
 }
 

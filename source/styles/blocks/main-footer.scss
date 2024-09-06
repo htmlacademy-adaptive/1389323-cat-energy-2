@@ -3,7 +3,7 @@
   background-color: $basic-grey;
 
   @media screen and (min-width: $tablet-width) {
-    padding-block: 55px;
+    padding-block: 56px 54px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -13,7 +13,7 @@
 
 .main-footer__container {
   @include full-flex(center, center, column nowrap);
-  gap: 20px;
+  gap: 15px;
   width: 280px;
   margin-inline: auto;
 
@@ -21,6 +21,7 @@
     width: 708px;
     flex-flow: row wrap;
     justify-content: flex-start;
+    align-items: flex-start;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -31,6 +32,7 @@
 .main-footer__logo {
   width: 130px;
   color: $special-dark;
+  display: block;
 
   &:hover,
   &:focus {
@@ -42,7 +44,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 132px;
+    width: 163px;
+    align-self: flex-start;
+    margin-top: 5px;
   }
 }
 
@@ -53,6 +57,7 @@
   @media screen and (min-width: $tablet-width) {
     width: 184px;
     margin-inline: auto;
+    margin-top: 6px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -63,8 +68,10 @@
 .main-footer__copyright {
   align-self: flex-start;
   width: 100%;
+  margin-top: 4px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 168px;
+    width: 163px;
+    margin-top: 0;
   }
 }

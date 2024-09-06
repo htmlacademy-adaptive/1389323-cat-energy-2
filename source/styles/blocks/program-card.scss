@@ -3,7 +3,7 @@
   background-color: $basic-grey;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 75px 316px 58px 52px;
+    padding: 77px 316px 56px 53px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -19,7 +19,7 @@
 .program-card__title {
   @include font-full($oswald-font, 24px, $line-height-mobile, 400, $secondary-color);
   position: relative;
-  margin-block: 0 29px;
+  margin-block: 0 30px;
   padding-left: calc($margin-left-title + $slim-width);
   text-transform: uppercase;
   word-wrap: break-word;
@@ -55,7 +55,7 @@
 
     @media screen and (min-width: $desktop-width) {
       width: 100px;
-      height: 102px;
+      height: 106px;
       $line-height-title: 36px;
       inset: calc(-1 * (106px / 2 - $line-height-desktop/2)) 0 0 0;
     }
@@ -74,7 +74,7 @@
 
     @media screen and (min-width: $desktop-width) {
       width: 134px;
-      height: 100px;
+      height: 102px;
       $line-height-title: 36px;
       inset: calc(-1 * (100px / 2 - $line-height-desktop/2)) 0 0 -19px;
     }
@@ -82,13 +82,25 @@
 }
 
 .program-card__text {
-  margin-block: 0 23px;
+  margin-block: 0 22px;
+  position: relative;
+
+  &:last-of-type::after {
+    @include before-after(240px, 1px);
+    position: absolute;
+    bottom: -22px;
+    background-color: #d9d9d9;
+  }
 
   @media screen and (min-width: $tablet-width) {
     color: $secondary-color;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 53px;
+    margin-bottom: 33px;
+
+    &:last-of-type::after {
+      display: none;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -101,16 +113,8 @@
   position: relative;
   display: inline-block;
   padding-right: 57px;
-  padding-top: 19px;
+  padding-top: 20px;
   text-transform: uppercase;
-
-  &::before {
-    @include before-after(240px, 1px);
-    position: absolute;
-    top: 0;
-    background-color: #d9d9d9;
-  }
-
 
   &::after {
     @include before-after(32px, 12px);
@@ -137,10 +141,6 @@
     line-height: 29.64px;
     padding-right: 57px;
 
-    &::before {
-      display: none;
-    }
-
     &::after {
       right: 0;
     }
@@ -148,5 +148,10 @@
 
   @media screen and (min-width: $desktop-width) {
     place-self: center start;
+    padding-top: 4px;
+
+    &::after {
+      top: calc(50% - 6px);
+    }
   }
 }

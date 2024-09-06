@@ -30,3 +30,10 @@
   flex-flow: $flex-flow;
   display: $display;
 }
+
+@function top-element-center($padding-top, $padding-bottom, $height-element) {
+  $top: calc(50% - $padding-top/2 + $padding-bottom/2 - $height-element/2);
+
+  @return $top;
+}
+

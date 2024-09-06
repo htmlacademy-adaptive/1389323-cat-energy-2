@@ -1,15 +1,15 @@
 .catalog {
-  padding-block: 0 25px;
+  padding-block: 28px 25px;
   width: 100%;
 
   @media screen and (min-width: $tablet-width) {
-    padding-block: 0 74px;
+    padding-block: 11px 74px;
     width: 708px;
     margin-inline: auto;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-block: 0 71px;
+    padding-block: 8px 70px;
     width: 1220px;
     margin-inline: auto;
   }
@@ -17,17 +17,19 @@
 
 .catalog__title {
   @include font-full($oswald-font, 36px, 36px, 400, $secondary-color);
-  margin: 0 20px 41px;
+  margin: 0 auto 41px;
+  width: 280px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 84px;
+    width: 100%;
+    margin-bottom: 96px;
     font-size: 60px;
     list-style: 60px;
   }
 }
 
 .catalog__list {
-  @include full-flex();
+  @include full-flex(flex-start, stretch);
   padding: 1px 0;
   margin: 0;
   list-style: none;
@@ -40,7 +42,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    gap: 63px 80px;
+    gap: 62px 80px;
   }
 }
 

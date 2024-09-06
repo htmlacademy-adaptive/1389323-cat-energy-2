@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header--nojs">
     <div class="main-header__container">
       <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу">
         <picture>
@@ -23,11 +23,11 @@
           <img class="main-header__logo-image" width="190" height="38" alt="Кот в костюме супер-героя и название компании 'Cat energy'" src="images/logo/logo-mobile.svg">
         </picture>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--open" type="button">
+      <nav class="main-nav main-nav--nojs">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
           <span class="visually-hidden">Открыть/свернуть меню</span>
         </button>
-        <ul class="main-nav__list main-nav__list--open">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -46,14 +46,14 @@
     <section class="address">
       <div class="address__container">
         <h2 class="visually-hidden">Где нас найти</h2>
-        <p class="address__appeal">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="address__appeal">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="address__text">
           <p class="address__desc">ул. Большая Конюшенная, д. 19/8</p>
           <p class="address__desc">Санкт-Петербург</p>
         </address>
       </div>
-      <div class="address__map map">
-      </div>
+      <iframe class="address__map map" title="Геологкация: город Санкт-Петербург ул.Большая Конюшенная, д. 19/8." src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d6669b729b71a2766c760885e5a0ec89bdcbc92ea19da0125c29644d37f2d9c&amp;source=constructor" width="320" height="362" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
   </main>
   <footer class="main-footer">

@@ -6,12 +6,13 @@
   }
 
   @media screen and  (min-width: $desktop-width) {
-    padding-bottom: 104px;
+    padding-bottom: 105px;
   }
 }
 
 .promo__title {
   margin-block: 0 32px;
+  width: fit-content;
 
   @media screen and  (min-width: $tablet-width) {
     margin-bottom: 66px;

@@ -1,6 +1,6 @@
 .index-subtitle {
   @include font-full($oswald-font, 36px, 40px, 400, $secondary-color);
-  text-align: center;
+  text-align: left;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;

@@ -1,6 +1,5 @@
 .parameter {
   @include full-flex(center, center, column nowrap);
-  position: relative;
   gap: 8px;
 }
 
@@ -8,12 +7,12 @@
   font-size: 24px;
   line-height: 24px;
   width: 100%;
-  padding: 14px 20px 18px;
+  padding: 14px 20px 16px;
   outline: 1px solid #cdcdcd;
   border-radius: 4px;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 15px 20px 20px;
+    padding: 15px 20px 19px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -21,16 +20,15 @@
 
 .parameter__name {
   @include font-full($lato-font, 12px, 12px, 400);
-  position: absolute;
-  top: 48px;
+  margin-top: -16px;
   text-transform: lowercase;
   background-color: $example-color;
   width: 87px;
-  padding-inline: 10px;
+  padding-inline: 9px 10px;
   z-index: 2;
 
   @media screen and (min-width: $tablet-width) {
-    top: 64px;
+    margin-top: -16px;
     font-size: 14px;
     line-height: 14px;
     width: 114px;

@@ -5,7 +5,8 @@
   padding: 14px 40px 13px 15px;
 
   &:invalid {
-    border: 2px solid #ff8282;
+    outline: 2px solid #ff8282;
+    outline-offset: -2px;
   }
 
   &:valid {
@@ -17,9 +18,8 @@
   }
 
   &:focus {
-    border-color: $primary-color;
-    border-width: 2px;
-    outline: none;
+    outline: 2px solid $primary-color;
+    outline-offset: -2px;
   }
 
   @media screen and (min-width: $tablet-width) {

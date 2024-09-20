@@ -39,8 +39,15 @@
     mask-size: 20px 18px;
   }
 
-  &:hover,
+  &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
   &:focus {
+    outline: none;
+
     &::after {
       background-color: $basic-green;
     }

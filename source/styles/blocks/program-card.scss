@@ -36,26 +36,48 @@
     padding-left: 162px;
   }
 
+  &::after {
+    @include before-after(50px, 50px);
+    background-color: $basic-green;
+    border-radius: 50%;
+    inset: calc(-1 * (50px / 2 - $line-height-mobile/2)) 0 0 0;
+    position: absolute;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      inset: 14px 0 0 392px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      inset: calc(-1 * (100px / 2 - $line-height-desktop/2) + 2px) 0 0 0;
+    }
+  }
+
   &::before {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 2;
   }
 
   &--slim::before {
     @include before-after(50px, 50px);
-    inset: calc(-1 * (50px / 2 - $line-height-mobile/2)) 0 0 0;
+    inset: calc(-1 * (50px / 2 - $line-height-mobile/2) - 3px) 0 0 0;
     background-image: url("../../icons/stack.svg#program-slim");
 
     @media screen and (min-width: $tablet-width) {
       width: 200px;
-      height: 210px;
+      height: 193px;
       inset: 4px 0 0 392px;
     }
 
     @media screen and (min-width: $desktop-width) {
       width: 100px;
-      height: 106px;
+      height: 96px;
       $line-height-title: 36px;
       inset: calc(-1 * (106px / 2 - $line-height-desktop/2)) 0 0 0;
     }
@@ -130,6 +152,15 @@
 
   &:hover::after {
     background-position: 0;
+  }
+
+  &:focus::after {
+    outline: 1px solid $primary-color;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:active {

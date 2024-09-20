@@ -9,7 +9,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    padding-block: 25px 62px;
+    padding-block: 25px 0;
 
     &::after {
       display: none;
@@ -17,7 +17,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-block: 55px 74px;
+    padding-block: 55px 0;
   }
 
   &--home {
@@ -26,11 +26,22 @@
     }
 
     @media screen and (min-width: $desktop-width) {
+      padding-bottom: 25px;
+      position: relative;
+    }
+  }
+
+  &--home::before {
+    @media screen and (min-width: $desktop-width) {
+      @include before-after(100%, 100%);
+      background-image:
+        linear-gradient(to left, rgba($basic-green, 0.85) 50%, $primary-bg-color 50%),
+        linear-gradient(to left, #4e4f53 50%, $primary-bg-color 50%);
+      background-size: 100% auto;
       position: absolute;
       top: 0;
-      z-index: 2;
-      width: 1220px;
-      left: calc((100vw - 1220px) / 2);
+      left: 0;
+      z-index: -2;
     }
   }
 
@@ -60,6 +71,10 @@
     .main-header--home & {
       padding-right: 36px;
     }
+
+    .main-header--program & {
+      padding-right: 31px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -68,6 +83,10 @@
     padding-inline: 0;
 
     .main-header--home & {
+      padding-right: 0;
+    }
+
+    .main-header--program & {
       padding-right: 0;
     }
   }
@@ -112,4 +131,3 @@
     height: 59px;
   }
 }
-

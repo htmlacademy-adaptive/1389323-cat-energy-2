@@ -1,12 +1,12 @@
 .additional {
-  padding-bottom: 40px;
+  padding-block: 25px 0;
 
   @media screen and  (min-width: $tablet-width) {
-    padding-bottom: 80px;
+    padding-top: 74px;
   }
 
   @media screen and  (min-width: $desktop-width) {
-    padding-bottom: 96px;
+    padding-top: 70px;
   }
 }
 
@@ -159,7 +159,7 @@
   background-image:
     url("../../icons/stack.svg#additional-icon"),
     linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-    image-set(url("../../images/background/additional-background@1x.jpg") 1x, url("../../images/background/additional-background@2x.jpg") 2x);
+    image-set(url("../../images/background/additional-background@1x.webp") 1x, url("../../images/background/additional-background@2x.webp") 2x, url("../../images/background/additional-background@1x.jpg") 1x, url("../../images/background/additional-background@2x.jpg") 2x);
   background-repeat: no-repeat;
   background-size: 78px 80px, cover, cover;
   background-position: top 58px center, top center, center;
@@ -170,7 +170,7 @@
     background-image:
       url("../../icons/stack.svg#additional-icon"),
       linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-      image-set(url("../../images/background/additional-background-tablet@1x.jpg") 1x, url("../../images/background/additional-background-tablet@2x.jpg") 2x);
+      image-set(url("../../images/background/additional-background-tablet@1x.webp") 1x, url("../../images/background/additional-background-tablet@2x.webp") 2x, url("../../images/background/additional-background-tablet@1x.jpg") 1x, url("../../images/background/additional-background-tablet@2x.jpg") 2x);
 
     background-size: 80px 83px, cover, cover;
     background-position: left 78px top calc(50% - 2px), top center, center;
@@ -185,7 +185,7 @@
     background-image:
       url("../../icons/stack.svg#additional-icon"),
       linear-gradient(rgba($basic-green, 0.85) 100%, $primary-bg-color 100%),
-      image-set(url("../../images/background/additional-background-desktop@1x.jpg") 1x, url("../../images/background/additional-background-desktop@2x.jpg") 2x);
+      image-set(url("../../images/background/additional-background-desktop@1x.webp") 1x, url("../../images/background/additional-background-desktop@2x.webp") 2x, url("../../images/background/additional-background-desktop@1x.jpg") 1x, url("../../images/background/additional-background-desktop@2x.jpg") 2x);
     background-position: top 56px center, top center, center;
   }
 }
@@ -207,4 +207,3 @@
     text-align: center;
   }
 }
-

@@ -12,6 +12,7 @@
   width: 280px;
   margin-inline: auto;
   padding-block: 26px 25px;
+  gap: 20px;
 
   @media screen and (min-width: $tablet-width) {
     width: 708px;
@@ -33,7 +34,7 @@
 .address__appeal {
   @include font-full($oswald-font, 16px, 20px, 400, $special-dark);
   text-transform: uppercase;
-  width: 140px;
+  width: 115px;
   margin-block: 0;
 
   @media screen and (min-width: $tablet-width) {

@@ -4,7 +4,7 @@
     font-weight: $font-weight;
     font-style: $font-style;
     src: $font-url;
-    display: swap;
+    font-display: swap;
   }
 }
 
@@ -23,17 +23,9 @@
   content: $content;
 }
 
-
 @mixin full-flex($justify-content: flex-start, $align-items: flex-start, $flex-flow: row wrap, $display: flex ) {
   justify-content: $justify-content;
   align-items: $align-items;
   flex-flow: $flex-flow;
   display: $display;
 }
-
-@function top-element-center($padding-top, $padding-bottom, $height-element) {
-  $top: calc(50% - $padding-top/2 + $padding-bottom/2 - $height-element/2);
-
-  @return $top;
-}
-

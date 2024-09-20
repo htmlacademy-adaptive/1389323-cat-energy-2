@@ -1,12 +1,12 @@
 .program {
-  padding-bottom: 20px;
+  padding-block: 20px 0;
 
   @media screen and (min-width: $tablet-width) {
-    padding-bottom: 46px;
+    padding-block: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-bottom: 71px;
+    padding-block: 82px 0;
     display: grid;
     grid-template-columns: repeat(2, 46.72%);
     gap: 30px 80px;

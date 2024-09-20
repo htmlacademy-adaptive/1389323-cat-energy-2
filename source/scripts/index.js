@@ -19,5 +19,3 @@ navToggle.addEventListener('click', () => {
     navToggle.classList.add('main-nav__toggle--opened');
   }
 });
-
-

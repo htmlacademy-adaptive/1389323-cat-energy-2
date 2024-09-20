@@ -1,12 +1,12 @@
 .promo {
-  padding-block: 0 40px;
+  padding-block: 40px;
 
   @media screen and  (min-width: $tablet-width) {
-    padding-bottom: 80px;
+    padding-block: 80px;
   }
 
   @media screen and  (min-width: $desktop-width) {
-    padding-bottom: 105px;
+    padding-block: 96px 105px;
   }
 }
 

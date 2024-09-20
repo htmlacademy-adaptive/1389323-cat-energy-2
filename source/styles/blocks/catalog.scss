@@ -1,15 +1,15 @@
 .catalog {
-  padding-block: 28px 25px;
+  padding-block: 28px 0;
   width: 100%;
 
   @media screen and (min-width: $tablet-width) {
-    padding-block: 11px 74px;
+    padding-block: 73px 0;
     width: 708px;
     margin-inline: auto;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-block: 8px 70px;
+    padding-top: 82px;
     width: 1220px;
     margin-inline: auto;
   }

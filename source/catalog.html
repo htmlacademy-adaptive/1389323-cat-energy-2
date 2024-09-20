@@ -5,16 +5,24 @@
   <meta charset="UTF-8">
   <title>Cat energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="Каталог кормов для котов, питание для кошек">
+  <meta name="description" content="Функциональное питание для котов. Выбери любимый вкус своего кота в нашем каталоге.">
+  <!-- preload -->
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <!-- favicon -->
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/favicons-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css">
+  <!-- scripts -->
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--nojs">
+  <header class="main-header main-header--nojs" data-test="header">
     <div class="main-header__container">
       <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу">
         <picture>
@@ -24,10 +32,10 @@
         </picture>
       </a>
       <nav class="main-nav main-nav--nojs">
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+        <button class="main-nav__toggle main-nav__toggle--opened" type="button">
           <span class="visually-hidden">Открыть/свернуть меню</span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--opened">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -42,12 +50,15 @@
     </div>
   </header>
   <main class="main-container">
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <h1 class="catalog__title">Каталог продукции</h1>
       <div class="catalog__list">
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/chicken-500-desktop@1x.webp 1x, images/catalog-desktop/chicken-500-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/chicken-500-tablet@1x.webp 1x, images/catalog-tablet/chicken-500-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/chicken-500@1x.webp 1x, images/catalog-mobile/chicken-500@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/chicken-500-desktop@1x.png 1x, images/catalog-desktop/chicken-500-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/chicken-500-tablet@1x.png 1x, images/catalog-tablet/chicken-500-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/chicken-500@1x.png" srcset="images/catalog-mobile/chicken-500@2x.png 2x">
@@ -78,6 +89,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/chicken-1000-desktop@1x.webp 1x, images/catalog-desktop/chicken-1000-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/chicken-1000-tablet@1x.webp 1x, images/catalog-tablet/chicken-1000-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/chicken-1000@1x.webp 1x, images/catalog-mobile/chicken-1000@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/chicken-1000-desktop@1x.png 1x, images/catalog-desktop/chicken-1000-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/chicken-1000-tablet@1x.png 1x, images/catalog-tablet/chicken-1000-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/chicken-1000@1x.png" srcset="images/catalog-mobile/chicken-1000@2x.png 2x">
@@ -108,6 +122,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/fish-500-desktop@1x.webp 1x, images/catalog-desktop/fish-500-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/fish-500-tablet@1x.webp 1x, images/catalog-tablet/fish-500-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/fish-500@1x.webp 1x, images/catalog-mobile/fish-500@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/fish-500-desktop@1x.png 1x, images/catalog-desktop/fish-500-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/fish-500-tablet@1x.png 1x, images/catalog-tablet/fish-500-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/fish-500@1x.png" srcset="images/catalog-mobile/fish-500@2x.png 2x">
@@ -138,6 +155,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/fish-1000-desktop@1x.webp 1x, images/catalog-desktop/fish-1000-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/fish-1000-tablet@1x.webp 1x, images/catalog-tablet/fish-1000-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/fish-1000@1x.webp 1x, images/catalog-mobile/fish-1000@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/fish-1000-desktop@1x.png 1x, images/catalog-desktop/fish-1000-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/fish-1000-tablet@1x.png 1x, images/catalog-tablet/fish-1000-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/fish-1000@1x.png" srcset="images/catalog-mobile/fish-1000@2x.png 2x">
@@ -168,6 +188,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/buckwheat-500-desktop@1x.webp 1x, images/catalog-desktop/buckwheat-500-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/buckwheat-500-tablet@1x.webp 1x, images/catalog-tablet/buckwheat-500-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/buckwheat-500@1x.webp 1x, images/catalog-mobile/buckwheat-500@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/buckwheat-500-desktop@1x.png 1x, images/catalog-desktop/buckwheat-500-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/buckwheat-500-tablet@1x.png 1x, images/catalog-tablet/buckwheat-500-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/buckwheat-500@1x.png" srcset="images/catalog-mobile/buckwheat-500@2x.png 2x">
@@ -198,6 +221,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/buckwheat-1000-desktop@1x.webp 1x, images/catalog-desktop/buckwheat-1000-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/buckwheat-1000-tablet@1x.webp 1x, images/catalog-tablet/buckwheat-1000-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/buckwheat-1000@1x.webp 1x, images/catalog-mobile/buckwheat-1000@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/buckwheat-1000-desktop@1x.png 1x, images/catalog-desktop/buckwheat-1000-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/buckwheat-1000-tablet@1x.png 1x, images/catalog-tablet/buckwheat-1000-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/buckwheat-1000@1x.png" srcset="images/catalog-mobile/buckwheat-1000@2x.png 2x">
@@ -228,6 +254,9 @@
         <article class="catalog__item card-product">
           <a class="card-product__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-desktop/rice-500-desktop@1x.webp 1x, images/catalog-desktop/rice-500-desktop@2x.webp 2x" width="169" height="210">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog-tablet/rice-500-tablet@1x.webp 1x, images/catalog-tablet/rice-500-tablet@2x.webp 2x" width="200" height="210">
+              <source type="image/webp" srcset="images/catalog-mobile/rice-500@1x.webp 1x, images/catalog-mobile/rice-500@2x.webp 2x" width="140" height="107">
               <source media="(min-width: 1280px)" srcset="images/catalog-desktop/rice-500-desktop@1x.png 1x, images/catalog-desktop/rice-500-desktop@2x.png 2x" type="image/png" width="169" height="210">
               <source media="(min-width: 768px)" srcset="images/catalog-tablet/rice-500-tablet@1x.png 1x, images/catalog-tablet/rice-500-tablet@2x.png 2x" type="image/png" width="200" height="210">
               <img class="card-product__image" width="140" height="107" alt="Пример упаковки корма для кошек" src="images/catalog-mobile/rice-500@1x.png" srcset="images/catalog-mobile/rice-500@2x.png 2x">
@@ -264,7 +293,7 @@
         </div>
       </div>
     </section>
-    <section class="page__container  additional">
+    <section class="page__container  additional" data-test="additional">
       <h2 class="additional__title catalog-subtitle">Дополнительные товары</h2>
       <div class="additional__container">
         <ul class="additional__list">
@@ -307,12 +336,12 @@
         <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!
         </p>
         <label><span class="visually-hidden">Укажите Вашу почту</span>
-          <input class="subscribe__email" type="email" name="email" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required>
+          <input class="subscribe__email basic-input" type="email" name="email" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required>
         </label>
         <button class="subscribe__button basic-button basic-button--accent" type="submit" name="subscribe__button">Подписаться</button>
       </form>
     </section>
-    <section class="address">
+    <section class="address" data-test="contacts">
       <h2 class="visually-hidden">Где нас найти</h2>
       <div class="address__container">
         <p class="address__appeal">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
@@ -321,11 +350,11 @@
           <p class="address__desc">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="address__map map" title="Геологкация: город Санкт-Петербург ул.Большая Конюшенная, д. 19/8." src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d6669b729b71a2766c760885e5a0ec89bdcbc92ea19da0125c29644d37f2d9c&amp;source=constructor" width="320" height="362" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      <iframe class="address__map map" title="Геологкация: город Санкт-Петербург ул.Большая Конюшенная, д. 19/8." src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d6669b729b71a2766c760885e5a0ec89bdcbc92ea19da0125c29644d37f2d9c&amp;source=constructor" width="320" height="362" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="main-footer__container">
       <a class="main-footer__logo" href="index.html" aria-label="Ссылка на главную страницу сайта.">
         <svg class="main-footer__logo-icon" width="128" height="24" role="img" focusable="false" aria-labelledby="logo-footer">

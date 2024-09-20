@@ -1,12 +1,12 @@
 .methodology {
-  padding-bottom: 49px;
+  padding-block: 20px 49px;
 
   @media screen and (min-width: $tablet-width) {
-    padding-bottom: 47px;
+    padding-block: 46px 46px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-bottom: 69px;
+    padding-block: 71px 68px;
   }
 }
 
@@ -164,4 +164,3 @@
     width: 100%;
   }
 }
-

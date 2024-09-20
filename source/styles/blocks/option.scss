@@ -1,0 +1,168 @@
+.option {
+  padding-left: 45px;
+  padding-top: 28px;
+
+  &--decorate {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    position: relative;
+
+    &::after,
+    &::before {
+      @include before-after(100vw, 1px);
+      position: absolute;
+      background-color: $decorate-fieldset;
+      box-shadow:
+        100vw 0 0 0 $decorate-fieldset,
+        -100vw 0 0 0 $decorate-fieldset;
+    }
+
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      bottom: 0;
+    }
+  }
+
+  &--additional {
+    margin-block: -4px -11px;
+    padding-top: 7px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    &--decorate {
+      border: 1px solid #e7e7e7;
+      padding: 28px 27px 29px 87px;
+    }
+
+    &--decorate::after,
+    &--decorate::before {
+      display: none;
+    }
+
+    &--additional {
+      @include full-flex();
+      gap: 42px 143px;
+      padding-left: 60px;
+      margin-block: -7px -8px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &--decorate {
+      padding: 30px 27px 28px 88px;
+    }
+
+    &--additional {
+      margin-bottom: -7px;
+      column-gap: 144px;
+    }
+  }
+}
+
+.option__parameter {
+  margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .option--additional & {
+      margin-bottom: 0;
+      width: 201px;
+      word-wrap: break-word;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    .option--additional & {
+      width: 181px;
+    }
+  }
+}
+
+.option__name {
+  position: relative;
+  line-height: $option-line-height-mobile;
+
+  &::before {
+    @include before-after(30px, 30px);
+    position: absolute;
+    top: calc(-1 * (30px / 2 - $option-line-height-mobile/2) + 2px);
+    left: -45px;
+    border: 1px solid #cdcdcd;
+    background-color: $primary-bg-color;
+  }
+
+  &--purpose::before {
+    border-radius: 50%;
+  }
+
+  &--purpose::after {
+    @include before-after(13px, 13px);
+    position: absolute;
+    top: calc(-1 * (13px / 2 - $option-line-height-mobile/2) + 2px);
+    left: -37px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    display: none;
+  }
+
+  &--additional::after {
+    @include before-after(16px, 10px);
+    position: absolute;
+    top: 2px;
+    left: -37px;
+    background-color: $primary-bg-color;
+    border-left: 2px solid $basic-green;
+    border-bottom: 2px solid $basic-green;
+    transform: translateY(20%) rotate(-51deg) skewX(-10deg);
+    display: none;
+  }
+
+
+  .option__value:checked + &::after {
+    display: block;
+  }
+
+  .option__value:hover + & {
+    opacity: 0.6;
+  }
+
+  .option__value:active + & {
+    opacity: 0.3;
+  }
+
+  .option__value:focus + &::before {
+    outline: 1px solid $secondary-color;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    line-height: $option-line-height-tablet;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      left: -60px;
+      top: calc(-1 * (40px / 2 - $option-line-height-tablet/2));
+    }
+
+    &--purpose::after {
+      width: 18px;
+      height: 18px;
+      top: calc(-1 * (18px / 2 - $option-line-height-tablet/2));
+      left: -49px;
+    }
+
+    &--additional::after {
+      width: 21px;
+      height: 13px;
+      left: -49px;
+    }
+  }
+}

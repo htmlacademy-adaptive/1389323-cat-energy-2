@@ -5,7 +5,7 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 29.64px;
-    padding: 62px 40px 60px;
+    padding: 62px 40px 61px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -31,7 +31,7 @@
 }
 
 .selection__text {
-  margin-block: 0 38px;
+  margin-block: 0 40px;
   width: 230px;
   font-size: 14px;
   color: $secondary-color;
@@ -115,14 +115,14 @@
   }
 
   &--profile {
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     box-shadow:
       25px 0 0 0 $primary-bg-color,
       -20px 0 0 0 $primary-bg-color;
   }
 
   &--comment {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   &--additional {
@@ -194,7 +194,7 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     width: 284px;
-    padding: 16px 28px;
+    padding: 17px 28px;
     text-align: left;
   }
 

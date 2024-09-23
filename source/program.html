@@ -57,13 +57,13 @@
         <fieldset class="selection__parameter selection__parameter--main profile ">
           <legend class="visually-hidden">Укажите основную информацию о вашем коте.</legend>
           <label class="profile__name">Имя:*
-            <input class="profile__value basic-input" type="text" name="name" value="Барсик" required>
+            <input class="profile__value basic-input" type="text" name="name" value="Барсик" placeholder="Барсик" required>
           </label>
           <label class="profile__name">Вес (кг):*
-            <input class="profile__value basic-input" type="text" name="weight" value="7" required>
+            <input class="profile__value basic-input" type="text" name="weight" value="7" placeholder="7" required>
           </label>
           <label class="profile__name">Возраст&nbsp;(лет):
-            <input class="profile__value basic-input" type="text" name="age" value="7">
+            <input class="profile__value basic-input" type="text" name="age" value="7" placeholder="7">
           </label>
         </fieldset>
         <fieldset class="selection__parameter selection__parameter--main option option--decorate">
@@ -132,8 +132,11 @@
           <p class="address__desc">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="address__map map" title="Геологкация: город Санкт-Петербург ул.Большая Конюшенная, д. 19/8." src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d6669b729b71a2766c760885e5a0ec89bdcbc92ea19da0125c29644d37f2d9c&amp;source=constructor" width="320" height="362" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="address__map map">
+        <iframe class="map__js" title="Геологкация: город Санкт-Петербург ул.Большая Конюшенная, д. 19/8." src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d6669b729b71a2766c760885e5a0ec89bdcbc92ea19da0125c29644d37f2d9c&amp;source=constructor" width="320" height="362" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <noscript class="map__nojs"></noscript>
+      </div>
     </section>
   </main>
   <footer class="main-footer" data-test="footer">

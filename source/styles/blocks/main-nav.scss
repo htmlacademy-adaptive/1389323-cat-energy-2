@@ -8,6 +8,13 @@
   margin-left: auto;
   margin-block: auto;
 
+  @media screen and (max-width: $mobile-width) {
+    &--nojs {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
   @media screen and (min-width: $tablet-width) {
     align-items: center;
     flex-flow: row wrap;
@@ -21,13 +28,6 @@
     font-size: 20px;
     line-height: 29.64px;
     color: $special-dark;
-  }
-
-  @media screen and (max-width: $mobile-width) {
-    &--nojs {
-      width: 100%;
-      align-items: center;
-    }
   }
 
   &--home {
@@ -48,10 +48,6 @@
   cursor: pointer;
   border: none;
   position: relative;
-
-  .main-nav--nojs & {
-    display: none;
-  }
 
   &--closed::before {
     @include before-after(24px, 2px);
@@ -93,6 +89,19 @@
   }
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+
+.main-nav--nojs .main-nav__list {
+  @media screen and (max-width: $mobile-width) {
+    display: block;
+    position: static;
+    margin: 10px 0 0;
+  }
+}
+
 .main-nav__list {
   display: none;
   position: absolute;
@@ -105,12 +114,6 @@
   list-style: none;
   background-color: $primary-bg-color;
   z-index: 3;
-
-  .main-nav--nojs & {
-    display: block;
-    position: static;
-    margin: 10px 0 0;
-  }
 
   &--opened {
     display: block;
@@ -149,7 +152,6 @@
   }
 }
 
-
 .main-nav__link {
   display: block;
   padding-block: 22px 23px;
@@ -161,6 +163,7 @@
 
   &:focus {
     opacity: 0.6;
+    outline-offset: 5px;
   }
 
   &:active {
@@ -192,6 +195,14 @@
 
     &--current-home {
       text-decoration-color: $contrast-text-color;
+    }
+  }
+}
+
+.main-nav--home .main-nav__link {
+  @media screen and (min-width: $desktop-width) {
+    &:focus {
+      outline-color: $contrast-text-color;
     }
   }
 }

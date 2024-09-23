@@ -42,10 +42,11 @@
 }
 
 .subscribe__button {
-  padding-block: 13px 13px;
+  padding-block: 14px;
   width: 100%;
 
   @media screen and  (min-width: $tablet-width) {
     width: 256px;
+    padding-block: 13px;
   }
 }

@@ -67,28 +67,32 @@
     justify-content: flex-start;
     width: 768px;
     padding-inline: 30px 34px;
-
-    .main-header--home & {
-      padding-right: 36px;
-    }
-
-    .main-header--program & {
-      padding-right: 31px;
-    }
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-inline: auto;
     width: 1220px;
     padding-inline: 0;
+  }
+}
 
-    .main-header--home & {
-      padding-right: 0;
-    }
+.main-header--home .main-header__container {
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 36px;
+  }
 
-    .main-header--program & {
-      padding-right: 0;
-    }
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.main-header--program .main-header__container {
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 31px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 

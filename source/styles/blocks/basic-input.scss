@@ -2,7 +2,8 @@
   @include font-full($oswald-font, 16px, 18px, 400, $primary-color);
   text-transform: uppercase;
   background-color: $primary-bg-color;
-  padding: 14px 40px 13px 15px;
+  padding: 13px 40px 12px 15px;
+  border: none;
 
   &:invalid {
     outline: 2px solid #ff8282;
@@ -10,11 +11,11 @@
   }
 
   &:valid {
-    border: 1px solid #e7e7e7;
+    outline: 1px solid #e7e7e7;
   }
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
   &:focus {
@@ -25,10 +26,10 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 29.64px;
-    padding: 10px 40px 10px 20px;
+    padding: 11px 40px 9px 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 10px 40px 10px 20px;
+    padding: 11px 40px 10px 20px;
   }
 }

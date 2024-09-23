@@ -46,7 +46,7 @@
       @include full-flex();
       gap: 42px 143px;
       padding-left: 60px;
-      margin-block: -7px -8px;
+      margin-block: -7px -9px;
     }
   }
 
@@ -56,7 +56,7 @@
     }
 
     &--additional {
-      margin-bottom: -7px;
+      margin-block: -6px -7px;
       column-gap: 144px;
     }
   }
@@ -71,18 +71,18 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
 
-    .option--additional & {
-      margin-bottom: 0;
-      width: 201px;
-      word-wrap: break-word;
-    }
+.option--additional .option__parameter {
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: 201px;
+    word-wrap: break-word;
   }
 
   @media screen and (min-width: $desktop-width) {
-    .option--additional & {
-      width: 181px;
-    }
+    width: 181px;
   }
 }
 
@@ -125,23 +125,6 @@
     display: none;
   }
 
-
-  .option__value:checked + &::after {
-    display: block;
-  }
-
-  .option__value:hover + & {
-    opacity: 0.6;
-  }
-
-  .option__value:active + & {
-    opacity: 0.3;
-  }
-
-  .option__value:focus + &::before {
-    outline: 1px solid $secondary-color;
-  }
-
   @media screen and (min-width: $tablet-width) {
     line-height: $option-line-height-tablet;
 
@@ -165,4 +148,20 @@
       left: -49px;
     }
   }
+}
+
+.option__value:checked + .option__name::after {
+  display: block;
+}
+
+.option__value:hover + .option__name {
+  opacity: 0.6;
+}
+
+.option__value:focus + .option__name::before {
+  outline: 1px solid $secondary-color;
+}
+
+.option__value:active + .option__name {
+  opacity: 0.3;
 }

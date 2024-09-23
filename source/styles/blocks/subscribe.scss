@@ -1,0 +1,52 @@
+.subscribe {
+  @include full-flex();
+  row-gap: 16px;
+
+  @media screen and  (min-width: $tablet-width) {
+    justify-content: center;
+    row-gap: 24px;
+  }
+}
+
+.subscribe__text {
+  @include font-full($oswald-font, 16px, 24px, 400, $secondary-color);
+  text-align: center;
+  margin-block: 0 8px;
+  width: 100%;
+
+  @media screen and  (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 632px;
+    margin-bottom: 0;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.subscribe__email {
+  font-size: 20px;
+  line-height: 29.6px;
+  padding: 14px 12px 11px;
+  width: 280px;
+
+  @media screen and  (min-width: $tablet-width) {
+    width: 376px;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    width: 496px;
+  }
+}
+
+.subscribe__button {
+  padding-block: 14px;
+  width: 100%;
+
+  @media screen and  (min-width: $tablet-width) {
+    width: 256px;
+    padding-block: 13px;
+  }
+}

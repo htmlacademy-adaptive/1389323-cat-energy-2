@@ -1,0 +1,26 @@
+.promo {
+  padding-block: 40px;
+
+  @media screen and  (min-width: $tablet-width) {
+    padding-block: 80px;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    padding-block: 96px 105px;
+  }
+}
+
+.promo__title {
+  margin-block: 0 32px;
+  width: fit-content;
+
+  @media screen and  (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    margin-left: 40px;
+  }
+
+  @media screen and  (min-width: $desktop-width) {
+    margin-bottom: 72px;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.basic-input {
+  @include font-full($oswald-font, 16px, 18px, 400, $primary-color);
+  text-transform: uppercase;
+  background-color: $primary-bg-color;
+  padding: 13px 40px 12px 15px;
+  border: none;
+
+  &:invalid {
+    outline: 2px solid #ff8282;
+    outline-offset: -2px;
+  }
+
+  &:valid {
+    outline: 1px solid #e7e7e7;
+  }
+
+  &:hover {
+    outline-color: #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: -2px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 29.64px;
+    padding: 11px 40px 9px 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 11px 40px 10px 20px;
+  }
+}

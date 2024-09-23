@@ -1,1 +1,45 @@
-/* здесь используйте глобальные переменные */
+/* fonts */
+$lato-font: "Lato", "Arial", sans-serif;
+$oswald-font: "Oswald", "Arial", sans-serif;
+
+/* colors */
+$primary-color: #444444;
+$secondary-color: #000000;
+$primary-bg-color: #ffffff;
+$basic-green: #68b738;
+$basic-grey: #f2f2f2;
+$basic-green-light: #5eaa2f;
+$contrast-text-color: #ffffff;
+$basic-grey-hover: #ebebeb;
+$special-grey: #666666;
+$special-dark: #111111;
+$special-dark-grey: #222222;
+$example-color: #eaeaea;
+$decorate-social-color: #d9d9d9;
+$decorate-fieldset: #d9d9d9;
+
+/* viewport */
+$tablet-width: 768px;
+$desktop-width: 1280px;
+$mobile-width: calc($tablet-width - 1px);
+
+/* program-card */
+/* line-height for title */
+$line-height-mobile: 37px;
+$line-height-desktop: 36px;
+/* width for icon */
+$slim-width: 50px;
+$pro-width: 67px;
+$margin-left-title: 20px;
+
+
+/* example */
+$height-slider-mobile: 256px;
+$width-slider-mobile: 280px;
+
+/* program-card */
+$padding-top-link: 4px;
+
+/* option */
+$option-line-height-mobile: 18px;
+$option-line-height-tablet: 29.64px;

@@ -69,27 +69,30 @@
         <fieldset class="selection__parameter selection__parameter--main option option--decorate">
           <legend class="visually-hidden">Укажите главную цель для выбора программы питания.</legend>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="radio" name="purpose" id="purpose-slim" checked>
+            <input class="option__value visually-hidden" type="radio" name="purpose" value="slim" id="purpose-slim" checked>
             <label class="option__name option__name--purpose" for="purpose-slim">Похудение</label>
           </div>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="radio" name="purpose" id="purpose-pro">
+            <input class="option__value visually-hidden" type="radio" name="purpose" value="pro" id="purpose-pro">
             <label class="option__name option__name--purpose" for="purpose-pro">Набор массы</label>
           </div>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="radio" name="purpose" id="purpose-other">
+            <input class="option__value visually-hidden" type="radio" name="purpose" value="other" id="purpose-other">
             <label class="option__name option__name--purpose" for="purpose-other">Не знаю (Нужен ваш совет)</label>
           </div>
         </fieldset>
         <fieldset class="selection__parameter profile profile--contacts">
           <legend class="selection__caption selection__caption--profile">Контактные данные <br class="selection__caption-break"><span class="selection__caption-space">(владельца кота)</span>
           </legend>
-          <label class="profile__name">E-mail:*
-            <input class="profile__value profile__value--email basic-input" type="email" name="email" value="kuklachev@gmail.com" required>
-          </label>
-          <label class="profile__name">Телефон:*
-            <input class="profile__value profile__value--phone basic-input" type="tel" name="email" value="8 (960) 900-60-90" required>
-          </label>
+          <div class="profile__name profile__name--contacts">
+            <input class="profile__value profile__value--contact basic-input" type="email" id="user-email" name="email" value="kuklachev@gmail.com" required>
+            <label class="profile__contact profile__contact--email" for="user-email">E-mail:*</label>
+          </div>
+          <div class="profile__name profile__name--contacts">
+            <input class="profile__value profile__value--contact basic-input" type="tel" id="user-phone" name="phone" value="8 (960) 900-60-90" required>
+            <label class="profile__contact profile__contact--phone" for="user-phone">Телефон:*
+            </label>
+          </div>
         </fieldset>
         <fieldset class="selection__parameter user-comment">
           <legend class="selection__caption selection__caption--comment">Комментарий
@@ -101,19 +104,19 @@
           <legend class="selection__caption selection__caption--additional">Дополнительно
           </legend>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="checkbox" id="sugar" name="sugar-free" checked>
+            <input class="option__value visually-hidden" type="checkbox" id="sugar" name="sugar-free" value="sweetener" checked>
             <label class="option__name option__name--additional" for="sugar">сахарозаменитель</label>
           </div>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="checkbox" id="water" name="drinking-water">
+            <input class="option__value visually-hidden" type="checkbox" id="water" name="drinking-water" value="water">
             <label class="option__name option__name--additional" for="water">питьевая вода</label>
           </div>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="checkbox" id="milk" name="drinking-milk">
+            <input class="option__value visually-hidden" type="checkbox" id="milk" name="drinking-milk" value="milk">
             <label class="option__name option__name--additional" for="milk">молоко</label>
           </div>
           <div class="option__parameter">
-            <input class="option__value visually-hidden" type="checkbox" id="vitamins" name="vitamins">
+            <input class="option__value visually-hidden" type="checkbox" id="vitamins" name="vitamins" value="vitamins">
             <label class="option__name option__name--additional" for="vitamins">витамины</label>
           </div>
         </fieldset>

@@ -33,12 +33,31 @@
       grid-template-rows: auto 1fr 1fr;
       background: $primary-bg-color;
       padding: 243px 38px 40px;
+      outline: 2px solid $basic-grey;
+      outline-offset: -2px;
+      position: relative;
     }
 
     @media screen and (min-width: $desktop-width) {
       padding-top: 231px;
       align-items: start;
       row-gap: 26px;
+    }
+  }
+
+  &--secondary::before {
+    @media screen and (min-width: $tablet-width) {
+      @include before-after (100%, 84px);
+      background-color: $primary-bg-color;
+      border-bottom: 2px solid $basic-grey;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    @media screen  and (min-width: $desktop-width) {
+      height: 82px;
     }
   }
 }

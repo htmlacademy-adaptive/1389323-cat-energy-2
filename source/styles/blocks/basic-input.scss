@@ -6,7 +6,7 @@
   border: none;
 
   &:invalid {
-    outline: 2px solid #ff8282;
+    outline: 2px solid $invalid-color;
     outline-offset: -2px;
   }
 
@@ -21,6 +21,11 @@
   &:focus {
     outline: 2px solid $primary-color;
     outline-offset: -2px;
+  }
+
+  &:disabled {
+    outline: 1px solid #e7e7e7;
+    opacity: 0.3;
   }
 
   @media screen and (min-width: $tablet-width) {

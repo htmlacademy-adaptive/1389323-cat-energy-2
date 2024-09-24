@@ -11,10 +11,9 @@
     &::before {
       @include before-after(100vw, 1px);
       position: absolute;
+      left: -100vw;
       background-color: $decorate-fieldset;
-      box-shadow:
-        100vw 0 0 0 $decorate-fieldset,
-        -100vw 0 0 0 $decorate-fieldset;
+      box-shadow: 100vw 0 0 0 $decorate-fieldset;
     }
 
     &::after {
@@ -87,8 +86,10 @@
 }
 
 .option__name {
+  color: $special-dark-grey;
   position: relative;
   line-height: $option-line-height-mobile;
+  cursor: pointer;
 
   &::before {
     @include before-after(30px, 30px);
@@ -111,6 +112,10 @@
     background-color: $basic-green;
     border-radius: 50%;
     display: none;
+  }
+
+  &--additional {
+    color: $secondary-color;
   }
 
   &--additional::after {
@@ -154,14 +159,15 @@
   display: block;
 }
 
-.option__value:hover + .option__name {
-  opacity: 0.6;
+.option__value:hover + .option__name::before {
+  border-color: #bababa;
 }
 
 .option__value:focus + .option__name::before {
   outline: 1px solid $secondary-color;
 }
 
-.option__value:active + .option__name {
+.option__value:disabled + .option__name {
   opacity: 0.3;
+  pointer-events: none;
 }
